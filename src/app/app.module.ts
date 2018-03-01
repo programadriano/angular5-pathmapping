@@ -3,16 +3,19 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { UserPipe } from './pipes/user.pipe';
+import { UserService } from './services/user.service';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    UserPipe
   ],
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [UserPipe, UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
